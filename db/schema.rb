@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081205064712) do
+ActiveRecord::Schema.define(:version => 20090126204017) do
 
   create_table "admin_site_languages", :force => true do |t|
     t.integer  "language_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20081205064712) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug",       :default => ""
   end
 
   create_table "channels", :force => true do |t|

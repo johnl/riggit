@@ -4,6 +4,11 @@
 </p>
 
 <p>
+    <label for="Slug">URL Slug</label><br />
+    <%= form.text_field :slug %>
+</p>
+
+<p>
     <label for="parent_id">Parent</label><br />
     <%= form.collection_select :parent_id, Category.root, :id, :name, {:prompt => true} %>
 </p>

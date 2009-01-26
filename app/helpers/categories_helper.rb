@@ -14,7 +14,7 @@ module CategoriesHelper
   
   def link_to_category(category)
     content_tag(:li, :class => (category.name == current_category_name ? 'selected' : '')) do
-      link_to category.name, category_path(:category => category.name)
+      link_to category.name, category_path(:category => category.slug)
     end
   end
 end
