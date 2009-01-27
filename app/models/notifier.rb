@@ -9,7 +9,7 @@ class Notifier < ActionMailer::Base
     set_site
     recipients email
     from       "info@riggit.org"
-    subject    "[#{@current_site.name}]New story added to your site"
+    subject    "[#{@current_site.name}] New story added to your site"
     content_type "text/html"
     body[:story] = story
     body[:email] = email
@@ -19,7 +19,7 @@ class Notifier < ActionMailer::Base
     set_site
     recipients email
     from       "info@riggit.org"
-    subject    "[#{@current_site.name}]New comment added to your post"
+    subject    "[#{@current_site.name}] New comment added to your post"
     body[:comment] = comment
     body[:email] = email
   end
@@ -28,7 +28,7 @@ class Notifier < ActionMailer::Base
     set_site
     recipients email
     from       "info@riggit.org"
-    subject    "[#{@current_site.name}]New story added to your site"
+    subject    "[#{@current_site.name}] New user added to your site"
     body[:user] = user
     body[:email] = email
   end
